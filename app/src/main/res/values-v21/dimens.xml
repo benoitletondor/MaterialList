@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fab_right_margin">25dp</dimen>
+    <dimen name="fab_screen_margin">16dp</dimen>
+</resources>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="5dp">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="2dp"
+        card_view:cardElevation="3dp"
+        card_view:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:id="@+id/recycler_view_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="20dp"
+            android:clickable="true"
+            android:background="?attr/selectableItemBackground">
+
+            <ImageView android:id="@+id/recycler_view_cell_image_view"
+                android:transitionName="thumb"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"/>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0">
+
+                <TextView
+                    android:id="@+id/recycler_view_cell_title_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:textSize="16sp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="9dp"
+                    android:orientation="horizontal">
+                    
+                    <Button
+                        android:id="@+id/recycler_view_cell_deny_button"
+                        android:layout_width="0dip"
+                        android:layout_weight="0.5"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/action_moderation_deny"
+                        android:theme="@style/DenyButtonTheme"
+                        android:background="?attr/selectableItemBackground"
+                        tools:ignore="ButtonStyle"/>
+
+                    <Button
+                        android:id="@+id/recycler_view_cell_approve_button"
+                        android:layout_width="0dip"
+                        android:layout_weight="0.5"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/action_moderation_approve"
+                        android:theme="@style/ApproveButtonTheme"
+                        android:background="?attr/selectableItemBackground"
+                        tools:ignore="ButtonStyle"/>
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/recycler_view_loader"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:orientation="vertical"
+            android:paddingLeft="100dp"
+            android:paddingRight="100dp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:background="#DDFFFFFF"
+            android:clickable="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/moderating_progress_text"
+                android:gravity="center"
+                android:layout_marginBottom="10dp"/>
+
+            <ProgressBar
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:indeterminate="true" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">MaterialList</string>
+
+    <string name="login_hint">Login</string>
+    <string name="pass_hint">Password</string>
+    <string name="login_action">Login</string>
+    <string name="login_error_connection_message">Please check the internet connection</string>
+    <string name="login_error_login_pass_error">Please check your login and password</string>
+    <string name="login_progress_text">Login…</string>
+
+    <string name="error_dialog_title">Oops</string>
+    <string name="error_dialog_message">An error occurred: %s</string>
+
+    <string name="no_media_placeholder">No medias available</string>
+    <string name="refresh_action">Refresh</string>
+
+    <string name="moderating_progress_text">Moderating…</string>
+    <string name="moderated_snackbar_text">Media %s</string>
+    <string name="moderation_denied">denied</string>
+    <string name="moderation_approved">approved</string>
+    <string name="media_date">Created on %s</string>
+    <string name="media_creator">By %s</string>
+    <string name="action_moderation_deny">Deny</string>
+    <string name="action_moderation_approve">Approve</string>
+
+    <string name="download_action">Download</string>
+</resources>
